@@ -9,9 +9,12 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <AFNetworking/AFNetworking.h>
 #import "ViewController.h"
+#import "QiitaViewController.h"
 
 @interface ViewController ()
+
 @property (nonatomic, strong) NSArray *responseData;
+
 @end
 
 @implementation ViewController
@@ -19,6 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"ストックした記事一覧";
     
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
@@ -56,6 +61,15 @@
         cell.textLabel.text = self.responseData[indexPath.row][@"title"];
     }
     return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    QiitaViewController *qiitaViewController = [QiitaViewController new];
+    qiitaViewController.stockData = self.responseData[indexPath.row];
+    [self.navigationController pushViewController:qiitaViewController animated:true];
 }
 
 @end
