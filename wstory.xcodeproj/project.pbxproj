@@ -13,7 +13,6 @@
 		82563EC8185137100087404C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82563EC6185137100087404C /* InfoPlist.strings */; };
 		82563ECA185137100087404C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563EC9185137100087404C /* main.m */; };
 		82563ECE185137100087404C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563ECD185137100087404C /* AppDelegate.m */; };
-		82563ED1185137100087404C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82563ECF185137100087404C /* Main.storyboard */; };
 		82563ED4185137100087404C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563ED3185137100087404C /* ViewController.m */; };
 		82563ED6185137100087404C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82563ED5185137100087404C /* Images.xcassets */; };
 		82563EDD185137100087404C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82563EDC185137100087404C /* XCTest.framework */; };
@@ -44,7 +43,6 @@
 		82563ECB185137100087404C /* wstory-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wstory-Prefix.pch"; sourceTree = "<group>"; };
 		82563ECC185137100087404C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82563ECD185137100087404C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		82563ED0185137100087404C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82563ED2185137100087404C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		82563ED3185137100087404C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82563ED5185137100087404C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 			children = (
 				82563ECC185137100087404C /* AppDelegate.h */,
 				82563ECD185137100087404C /* AppDelegate.m */,
-				82563ECF185137100087404C /* Main.storyboard */,
 				82563ED2185137100087404C /* ViewController.h */,
 				82563ED3185137100087404C /* ViewController.m */,
 				82563ED5185137100087404C /* Images.xcassets */,
@@ -230,7 +227,6 @@
 			files = (
 				82563ED6185137100087404C /* Images.xcassets in Resources */,
 				82563EC8185137100087404C /* InfoPlist.strings in Resources */,
-				82563ED1185137100087404C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,14 +276,6 @@
 				82563EC7185137100087404C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		82563ECF185137100087404C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				82563ED0185137100087404C /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		82563EE5185137100087404C /* InfoPlist.strings */ = {
