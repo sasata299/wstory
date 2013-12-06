@@ -8,6 +8,7 @@
 
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <AFNetworking/AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "ViewController.h"
 #import "QiitaViewController.h"
 
@@ -58,11 +59,19 @@
     }
     if (self.responseData) {
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        NSURL *userImage = [NSURL URLWithString:self.responseData[indexPath.row][@"user"][@"profile_image_url"]];
+        [cell.imageView setImageWithURL:userImage placeholderImage:[UIImage imageNamed:@"Image"]];
+        
         cell.textLabel.text = self.responseData[indexPath.row][@"title"];
     }
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
