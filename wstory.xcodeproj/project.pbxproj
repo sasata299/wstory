@@ -22,6 +22,7 @@
 		82563EE7185137100087404C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82563EE5185137100087404C /* InfoPlist.strings */; };
 		82563EE9185137100087404C /* wstoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563EE8185137100087404C /* wstoryTests.m */; };
 		82563EF418513C280087404C /* QiitaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563EF318513C280087404C /* QiitaViewController.m */; };
+		82563EFC1852E7460087404C /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563EFB1852E7460087404C /* CustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		82563EE8185137100087404C /* wstoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wstoryTests.m; sourceTree = "<group>"; };
 		82563EF218513C280087404C /* QiitaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiitaViewController.h; sourceTree = "<group>"; };
 		82563EF318513C280087404C /* QiitaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiitaViewController.m; sourceTree = "<group>"; };
+		82563EFA1852E7460087404C /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		82563EFB1852E7460087404C /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		86DC26B2E6D44AA0AB9227A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,6 +124,8 @@
 			children = (
 				82563ECC185137100087404C /* AppDelegate.h */,
 				82563ECD185137100087404C /* AppDelegate.m */,
+				82563EFA1852E7460087404C /* CustomCell.h */,
+				82563EFB1852E7460087404C /* CustomCell.m */,
 				82563ED2185137100087404C /* ViewController.h */,
 				82563ED3185137100087404C /* ViewController.m */,
 				82563EF218513C280087404C /* QiitaViewController.h */,
@@ -295,6 +300,7 @@
 				82563ECE185137100087404C /* AppDelegate.m in Sources */,
 				82563ECA185137100087404C /* main.m in Sources */,
 				82563EF418513C280087404C /* QiitaViewController.m in Sources */,
+				82563EFC1852E7460087404C /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

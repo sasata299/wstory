@@ -11,6 +11,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ViewController.h"
 #import "QiitaViewController.h"
+#import "CustomCell.h"
 
 @interface ViewController ()
 
@@ -53,17 +54,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     if (self.responseData) {
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        
-        NSURL *userImage = [NSURL URLWithString:self.responseData[indexPath.row][@"user"][@"profile_image_url"]];
-        [cell.imageView setImageWithURL:userImage placeholderImage:[UIImage imageNamed:@"Image"]];
-        
-        cell.textLabel.text = self.responseData[indexPath.row][@"title"];
+        [cell show:self.responseData[indexPath.row]];
     }
     return cell;
 }
