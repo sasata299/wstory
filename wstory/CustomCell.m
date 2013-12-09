@@ -6,7 +6,6 @@
 //  Copyright (c) 2013年 sasata299. All rights reserved.
 //
 
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "CustomCell.h"
 
 @implementation CustomCell

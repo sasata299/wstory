@@ -6,8 +6,6 @@
 //  Copyright (c) 2013年 sasata299. All rights reserved.
 //
 
-#import <SVProgressHUD/SVProgressHUD.h>
-#import <AFNetworking/AFNetworking.h>
 #import "ViewController.h"
 #import "QiitaViewController.h"
 #import "CustomCell.h"
