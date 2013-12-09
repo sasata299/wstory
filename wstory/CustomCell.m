@@ -6,6 +6,7 @@
 //  Copyright (c) 2013年 sasata299. All rights reserved.
 //
 
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "CustomCell.h"
 
 @implementation CustomCell
@@ -31,8 +32,8 @@
 {
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-//    NSURL *userImage = [NSURL URLWithString:stockData[@"user"][@"profile_image_url"]];
-//    [self.imageView setImageWithURL:userImage placeholderImage:[UIImage imageNamed:@"Image"]];
+    NSURL *userImage = [NSURL URLWithString:stockData[@"user"][@"profile_image_url"]];
+    [self.imageView setImageWithURL:userImage placeholderImage:[UIImage imageNamed:@"Image"]];
     
     self.textLabel.text = stockData[@"title"];
 }
