@@ -98,6 +98,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		820ED4971857D88F00FF9803 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				82563F2C1855DC760087404C /* User.h */,
+				82563F2D1855DC760087404C /* User.m */,
+				82563F291855DC090087404C /* Stock.h */,
+				82563F2A1855DC090087404C /* Stock.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		820ED4981857D8B400FF9803 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				82563EF218513C280087404C /* QiitaViewController.h */,
+				82563EF318513C280087404C /* QiitaViewController.m */,
+				82563ED2185137100087404C /* ViewController.h */,
+				82563ED3185137100087404C /* ViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
 		82563EB1185137100087404C = {
 			isa = PBXGroup;
 			children = (
@@ -136,18 +158,12 @@
 				82563ECC185137100087404C /* AppDelegate.h */,
 				82563ECD185137100087404C /* AppDelegate.m */,
 				82563EFA1852E7460087404C /* CustomCell.h */,
-				82563F231855DA600087404C /* ObjectManager.h */,
-				82563F241855DA600087404C /* ObjectManager.m */,
-				82563F291855DC090087404C /* Stock.h */,
-				82563F2C1855DC760087404C /* User.h */,
-				82563F2D1855DC760087404C /* User.m */,
-				82563F2A1855DC090087404C /* Stock.m */,
 				82563EFB1852E7460087404C /* CustomCell.m */,
 				82563EFD1855428D0087404C /* TableViewCell.xib */,
-				82563ED2185137100087404C /* ViewController.h */,
-				82563ED3185137100087404C /* ViewController.m */,
-				82563EF218513C280087404C /* QiitaViewController.h */,
-				82563EF318513C280087404C /* QiitaViewController.m */,
+				82563F231855DA600087404C /* ObjectManager.h */,
+				82563F241855DA600087404C /* ObjectManager.m */,
+				820ED4981857D8B400FF9803 /* controllers */,
+				820ED4971857D88F00FF9803 /* models */,
 				82563ED5185137100087404C /* Images.xcassets */,
 				82563EC4185137100087404C /* Supporting Files */,
 			);
@@ -232,6 +248,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = sasata299;
 				TargetAttributes = {
+					82563EB9185137100087404C = {
+						DevelopmentTeam = 75MTU6C642;
+					};
 					82563EDA185137100087404C = {
 						TestTargetID = 82563EB9185137100087404C;
 					};
@@ -442,10 +461,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wstory/wstory-Prefix.pch";
 				INFOPLIST_FILE = "wstory/wstory-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -456,10 +478,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wstory/wstory-Prefix.pch";
 				INFOPLIST_FILE = "wstory/wstory-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
