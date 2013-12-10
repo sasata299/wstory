@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+# import "Stock.h"
 
 @interface QiitaViewController : UIViewController
 
-@property (nonatomic, strong) NSObject *stockData;
+@property (nonatomic, strong) Stock *stockData;
 
 @end
