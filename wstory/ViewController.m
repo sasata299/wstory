@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "QiitaViewController.h"
 #import "CustomCell.h"
+#import "Stock.h"
 
 @interface ViewController ()
 
@@ -29,13 +30,11 @@
     
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"https://qiita.com/api/v1/users/sasata299/stocks" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        self.responseData = responseObject;
-        [self.tableView reloadData];
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"/api/v1/users/sasata299/stocks" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         [SVProgressHUD dismiss];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        self.responseData = mappingResult.array;
+        [self.tableView reloadData];
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
 }

@@ -10,6 +10,6 @@
 
 @interface QiitaViewController : UIViewController
 
-@property (nonatomic, strong) NSDictionary *stockData;
+@property (nonatomic, strong) NSObject *stockData;
 
 @end

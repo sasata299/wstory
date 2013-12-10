@@ -24,6 +24,9 @@
 		82563EF418513C280087404C /* QiitaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563EF318513C280087404C /* QiitaViewController.m */; };
 		82563EFC1852E7460087404C /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563EFB1852E7460087404C /* CustomCell.m */; };
 		82563EFE1855428D0087404C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82563EFD1855428D0087404C /* TableViewCell.xib */; };
+		82563F251855DA600087404C /* ObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563F241855DA600087404C /* ObjectManager.m */; };
+		82563F2B1855DC090087404C /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563F2A1855DC090087404C /* Stock.m */; };
+		82563F2E1855DC760087404C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 82563F2D1855DC760087404C /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,12 @@
 		82563EFA1852E7460087404C /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		82563EFB1852E7460087404C /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		82563EFD1855428D0087404C /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		82563F231855DA600087404C /* ObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectManager.h; sourceTree = "<group>"; };
+		82563F241855DA600087404C /* ObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectManager.m; sourceTree = "<group>"; };
+		82563F291855DC090087404C /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
+		82563F2A1855DC090087404C /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
+		82563F2C1855DC760087404C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		82563F2D1855DC760087404C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		86DC26B2E6D44AA0AB9227A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -127,6 +136,12 @@
 				82563ECC185137100087404C /* AppDelegate.h */,
 				82563ECD185137100087404C /* AppDelegate.m */,
 				82563EFA1852E7460087404C /* CustomCell.h */,
+				82563F231855DA600087404C /* ObjectManager.h */,
+				82563F241855DA600087404C /* ObjectManager.m */,
+				82563F291855DC090087404C /* Stock.h */,
+				82563F2C1855DC760087404C /* User.h */,
+				82563F2D1855DC760087404C /* User.m */,
+				82563F2A1855DC090087404C /* Stock.m */,
 				82563EFB1852E7460087404C /* CustomCell.m */,
 				82563EFD1855428D0087404C /* TableViewCell.xib */,
 				82563ED2185137100087404C /* ViewController.h */,
@@ -300,10 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82563F2E1855DC760087404C /* User.m in Sources */,
 				82563ED4185137100087404C /* ViewController.m in Sources */,
+				82563F2B1855DC090087404C /* Stock.m in Sources */,
 				82563ECE185137100087404C /* AppDelegate.m in Sources */,
 				82563ECA185137100087404C /* main.m in Sources */,
 				82563EF418513C280087404C /* QiitaViewController.m in Sources */,
+				82563F251855DA600087404C /* ObjectManager.m in Sources */,
 				82563EFC1852E7460087404C /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

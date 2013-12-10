@@ -31,10 +31,11 @@
 {
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    NSURL *userImageURL = [NSURL URLWithString:stockData[@"user"][@"profile_image_url"]];
+    NSString *profileImageURL = [[stockData valueForKey:@"user"] valueForKey:@"profileImageURL"];
+    NSURL *userImageURL = [NSURL URLWithString:profileImageURL];
     [self.userImageView setImageWithURL:userImageURL placeholderImage:[UIImage imageNamed:@"Image"]];
     
-    self.titleLabel.text = stockData[@"title"];
+    self.titleLabel.text = [stockData valueForKey:@"title"];
 }
 
 @end

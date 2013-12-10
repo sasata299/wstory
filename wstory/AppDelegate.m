@@ -8,11 +8,20 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "ObjectManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    #ifdef DEBUG
+        RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
+        RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    #endif
+    
+    // Initialize ObjectManager
+    [ObjectManager new];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     ViewController *viewController = [[ViewController alloc] init];

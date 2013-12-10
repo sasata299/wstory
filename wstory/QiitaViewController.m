@@ -27,11 +27,11 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = self.stockData[@"title"];
+    self.navigationItem.title = [self.stockData valueForKey:@"title"];
 	
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     
-    NSURL *url = [NSURL URLWithString:self.stockData[@"url"]];
+    NSURL *url = [NSURL URLWithString:[self.stockData valueForKey:@"url"]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     [webView loadRequest:request];
