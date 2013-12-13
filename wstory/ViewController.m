@@ -13,7 +13,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) NSArray *responseData;
+@property (nonatomic, strong) NSArray *stocks;
 
 @end
 
@@ -32,7 +32,7 @@
     
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/api/v1/users/sasata299/stocks" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         [SVProgressHUD dismiss];
-        self.responseData = mappingResult.array;
+        self.stocks = mappingResult.array;
         [self.tableView reloadData];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -47,16 +47,14 @@
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
 {
-    return [self.responseData count];
+    return [self.stocks count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIdentifier = @"Cell";
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    if (self.responseData) {
-        [cell show:self.responseData[indexPath.row]];
-    }
+    [cell show:self.stocks[indexPath.row]];
     return cell;
 }
 
@@ -69,7 +67,7 @@
 {
     //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     QiitaViewController *qiitaViewController = [QiitaViewController new];
-    qiitaViewController.stockData = self.responseData[indexPath.row];
+    qiitaViewController.stockData = self.stocks[indexPath.row];
     [self.navigationController pushViewController:qiitaViewController animated:true];
 }
 

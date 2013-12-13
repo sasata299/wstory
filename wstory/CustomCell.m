@@ -7,6 +7,7 @@
 //
 
 #import "CustomCell.h"
+#import "Stock.h"
 
 @implementation CustomCell
 
@@ -27,15 +28,15 @@
     // Configure the view for the selected state
 }
 
-- (void)show:(NSDictionary *)stockData
+- (void)show:(Stock *)stockData
 {
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    NSString *profileImageURL = [[stockData valueForKey:@"user"] valueForKey:@"profileImageURL"];
+    NSString *profileImageURL = stockData.user.profileImageURL;
     NSURL *userImageURL = [NSURL URLWithString:profileImageURL];
     [self.userImageView setImageWithURL:userImageURL placeholderImage:[UIImage imageNamed:@"Image"]];
     
-    self.titleLabel.text = [stockData valueForKey:@"title"];
+    self.titleLabel.text = stockData.title;
 }
 
 @end
